@@ -110,7 +110,10 @@ void revArray(int arr[], int i ,int N) {
         swap(arr[i],arr[N-i-1]);
         revArray(arr,i+1,N);
     }    
-}   
+}  
+//Q-8 - check palindrome 
+
+//Remarks - similar to reverse an array concept 
 bool checkPdrome(string name,int n,int i) {
     if(i>=n/2) return true;
     else {
@@ -128,6 +131,15 @@ int fib(int n) {
         int l =fib(n-1);
         int sl = fib(n-2);
     }
+}
+int gcd(int n1,int n2) {
+    while(n1 !=0 &&  n2 !=0)  {
+        if(n1 > n2) n1 =n1%n2;
+        if(n2 > n1) n2 = n2%n1;
+    }
+    if(n1==0) return n2;
+    else return n1;
+
 }
 int main() {
     int count=1;
@@ -159,11 +171,12 @@ int main() {
     // for(int i=0;i<N;i++) cin >> arr[i];
     // revArray(arr,i,N);
     // for(int i=0;i<N;i++) cout << arr[i] << " ";
-    string name;
-    cout << "Enter name : ";
-    cin >> name;
-    int n = name.size();
-    cout << checkPdrome(name,n,i);
+    // string name;
+    // cout << "Enter name : ";
+    // cin >> name;
+    // int n = name.size();
+    // cout << checkPdrome(name,n,i);
+    cout << gcd(5,7);
     
     return 0;
 } 
