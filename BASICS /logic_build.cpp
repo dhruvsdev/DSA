@@ -3,6 +3,16 @@
 #include <math.h>
 using namespace std;
 
+
+int  sumOfDigits(int n,int sum) {
+    if(n==0) return sum;
+    else {
+        sum += (n % 10);
+        return sumOfDigits(n/10,sum);
+    }
+
+}
+
 int main()
 {
     // Q-1 :
@@ -149,4 +159,94 @@ int main()
     // for(int i=1;i<=n;i++) {
     //     cout << a * pow(r,i-1) << endl;
     // }
+
+    //Q-12 :
+    // int n;
+    // cout << "Enter n : ";
+    // cin >> n;
+    // int a =0;
+    // int b =1;
+    // int sum =1;
+    // int curr =0;
+    // for(int i =0;i<n-2;i++) {
+    //     curr = (a+b);
+    //     a = b;
+    //     b = curr;
+    //     cout << curr << " ";
+    //     sum+=curr;
+    // }
+    // cout <<endl;
+    // cout << sum;
+    //Q-13 :
+    // int n;
+    // cout << "Enter n : ";
+    // cin >> n;
+    // int curr=1;
+    // for(int i =0;i<n;i++) {
+    //     for(int j=0;j<=i;j++) {
+    //         cout << curr << " ";
+    //         curr+=1;
+
+    //     }
+    //     cout << endl;
+    // }
+    
+    //Q-14 : // nice one 
+    // for(int i =1;i<501;i++) {
+    //     int temp = i;
+    //     int rev =0;
+    //     while(temp>0) {
+    //         int digit = temp % 10;
+    //         temp = temp/10;
+    //         rev = rev*10 + digit;
+    //     }
+    //     if(rev==i) {
+    //         cout << rev << " ";
+    //     }
+        
+    // }
+    //Q-15 :
+    // int n;
+    // cout << "Enter n : ";
+    // cin >> n;
+    // int minv =INT_MAX;
+    // int maxv = INT_MIN;
+    // if(n==0) {
+    //     minv = n;
+    //     maxv = n;
+    // }
+    // while(n>0) {
+    //     int digit = n % 10;
+    //     n = n / 10;
+    //     minv = min(minv,digit);
+    //     maxv= max(maxv,digit);
+    // }
+    // cout << "Min digit : " << minv << endl;
+    // cout << "Max digit : " << maxv << endl;
+
+    //Q-16 :
+    // int n;
+    // cout << "Enter n : ";
+    // cin >> n;
+    // int sume =0;
+    // int sumo =0;
+    // while(n>0) {
+    //     int digit = n % 10;
+    //     n = n / 10;
+    //     if(digit%2 ==0) sume+=digit;
+    //     else sumo +=digit;
+
+    // }
+    // cout << "sum of even digits : "<< sume << endl;
+    // cout << "sum of odd digits : " << sumo << endl;
+    int n;
+    cout << "Enter n : ";
+    cin >> n;
+    int sum = 0;
+    cout << sumOfDigits(n,sum);
+
+
+
+
+
 }
