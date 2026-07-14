@@ -1,5 +1,5 @@
 ---
 triple:          'arm64-apple-darwin'
-binary-path:     "/Users/dhruv/Desktop/DSA 4.11.27 PM/Arrays/Easy/output/leftrotate"
+binary-path:     '/Users/dhruv/Desktop/DSA/Arrays/Easy/output/leftrotate'
 relocations:     []
 ...
