@@ -3,20 +3,37 @@ class Solution {
     vector<int> findUnion(vector<int> &a, vector<int> &b) {
         int n1=a.size();
         int n2=b.size();
-        set<int> s;
-        //nums1
-        for(int i =0;i<n1;i++) {
-            s.insert(a[i]);
+        vector<int> temp;
+        int i =0;
+        int j =0;
+        while(i<n1 && j<n2) {
+            if(a[i]<=b[j]) {
+                if(temp.size()==0 || temp.back() !=a[i]) {
+                    temp.push_back(a[i]);
+                }
+                i++;
+            }
+            else {
+                if(temp.size()==0 || temp.back() !=b[j]) {
+                    temp.push_back(b[j]);
+                    
+                }
+                j++;
+            }
         }
-        //nums2
-        for(int i=0;i<n2;i++) {
-            s.insert(b[i]);
+        while(i<n1) {
+            if(temp.size()==0 || temp.back() !=a[i]) {
+                temp.push_back(a[i]);
+            }
+            i++;
         }
-        //print
-        vector<int> arr;
-        for(auto it : s) {
-            arr.push_back(it);
+        while(j<n2) {
+            if(temp.size()==0 || temp.back() !=b[j]) {
+                temp.push_back(b[j]);
+            }
+            j++;
         }
-        return arr;
+        return temp;
+        
     }
 };
