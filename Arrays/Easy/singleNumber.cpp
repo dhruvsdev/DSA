@@ -17,18 +17,24 @@ int maxLengthSubArrayK(vector<int> & nums,int k) {
     //     }
     // }
     // return len;
-    int n =nums.size();
-    int len=0;
-    for(int i =0;i<n;i++) {
-        int sum =0;
-        for(int j =i;j<n;j++) {
-            sum+=nums[j];
-            if(sum==k) {
-                len=max(len,j-i+1);
-            }
-        }
-    }
-    return len;
+    // int n =nums.size();
+    // int len=0;
+    // for(int i =0;i<n;i++) {
+    //     int sum=0;
+    //     for(int j =i;j<n;j++) {
+    //         sum+=nums[j];
+    //         if(sum==k) {
+    //             len=max(len,j-i+1);
+    //         }
+    //     }
+    // }
+    // return len;
+
+    //TC - O(n^2) Brute force approach 
+
+    // PREFIX SUM - Better approach 
+
+    
 }
 vector<int> twoSum(vector<int>& numbers, int target) {
         vector<int> pair;
@@ -95,11 +101,11 @@ int main() {
         cin >> x;
         nums.push_back(x);
     }
-    // cout << maxLengthSubArrayK(nums,k);
-    // vector<int> vec = twoSum(nums,k);
-    // for(auto it : vec) {
-    //     cout << it << " ";
-    // }
-    cout << majorityElement(nums);
+    cout << maxLengthSubArrayK(nums,k);
+    vector<int> vec = twoSum(nums,k);
+    for(auto it : vec) {
+        cout << it << " ";
+    }
+    // cout << majorityElement(nums);
 
 }
