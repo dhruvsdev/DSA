@@ -8,8 +8,6 @@ int main() {
     string s;
     cout << "enter string :";
     cin >> s;
-    
-    string temp = s;
     int n = s.size();
     int ans = checkPalindrome(s,0,n-1);
 
