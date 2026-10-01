@@ -46,6 +46,7 @@ int smallestDivisor(vector<int> &nums, int threshold)
     return ans;
 }
 
+
 int main() {
     vector<int> v1={1,2,5,9};
     cout << smallestDivisor(v1,6);

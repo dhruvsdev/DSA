@@ -2,6 +2,7 @@
 #include <vector>
 using namespace std;
 
+//Standard Binary Search Implementation
 
 int binarySearch(vector<int> vec , int val);
 
